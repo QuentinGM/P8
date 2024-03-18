@@ -1,0 +1,27 @@
+@use "../scss/variables" as *;
+
+.banner {
+    position : relative;
+    background-position : center;
+    background-size : cover;
+    padding-inline : 2rem;
+    background-image: url("https://www.figma.com/file/2BZEoBhyxt5IwZgRn0wGsL/image/4706e7dde270fc8fc902a1eb738458e7b29c1899");
+    min-height: 140px;
+    margin : auto;
+    border-radius: 2rem;
+    display: grid;
+    place-items: center;
+    color: $color-tertiary;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    &::before{
+        position: absolute;
+        border-radius: 2rem;
+        content: "";
+        left: 0;
+        top : 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0,5;
+}
+}

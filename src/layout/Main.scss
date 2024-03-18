@@ -1,0 +1,9 @@
+@use "../scss/variables" as *;
+
+.main {
+    padding: 2rem 3rem;
+    min-height: 69vh;
+    @media screen and (width <= 768px) {
+        padding : 1rem;
+    }
+}

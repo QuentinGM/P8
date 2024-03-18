@@ -1,0 +1,48 @@
+@use "../scss/variables.scss" as *;
+
+.discribe_panel {
+    margin-bottom: 1rem;
+    flex-basis : 50%;
+    overflow: hidden;
+    p {
+        margin-block : 0;
+    }
+    .description__title {
+        background-color : $color-primary;
+        color : $color-tertiary;
+        padding: 0.2em 1em;
+        border-radius: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+    .description__content {
+        background-color: $background-light;
+        color : black;
+        padding : 1.7rem;
+        border-radius: 0.7rem;
+        position: relative;
+        top : -0.3rem;
+        z-index : -1;
+        animation: slide-in 0.5s ease-in-out;
+        &.hidden {
+            animation: slide-out 0.5s ease-in-out;
+        }
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateY(-100%);
+    }
+}
