@@ -13,30 +13,31 @@ function ApartmentPage() {
     fetchDataApartment();
   }, []);
 
-  function fetchDataApartment() {
-    const storedApartmentId = localStorage.getItem('selectedApartmentId');
-    const apartmentId = location.state ? location.state.apartmentId : null;
-    
-    if (apartmentId) {
-      fetch("database.json")
-        .then((res) => res.json())
-        .then((flats) => {
-          const flat = flats.find((flat) => flat.id === apartmentId);
-          setSelectedFlat(flat);
-          localStorage.setItem('selectedApartmentId', apartmentId);
-        })
-        .catch(console.error);
-    } else if (storedApartmentId) {
-      fetch("database.json")
-        .then((res) => res.json())
-        .then((flats) => {
-          const flat = flats.find((flat) => flat.id === storedApartmentId);
-          setSelectedFlat(flat);
-        })
-        .catch(console.error);
+  async function fetchDataApartment() {
+    try {
+      const storedApartmentId = localStorage.getItem('selectedApartmentId');
+      const apartmentId = location.state ? location.state.apartmentId : null;
+      
+      let response;
+      if (apartmentId) {
+        response = await fetch("http://localhost:5173/database.json");
+      } else if (storedApartmentId) {
+        response = await fetch("http://localhost:5173/database.json");
+      }
+
+      if (response.ok) {
+        const flats = await response.json();
+        const flat = flats.find((flat) => flat.id === (apartmentId || storedApartmentId));
+        setSelectedFlat(flat);
+        localStorage.setItem('selectedApartmentId', flat.id);
+      } else {
+        console.error("Erreur lors de la récupération des données");
+      }
+    } catch (error) {
+      console.error("Une erreur est survenue:", error);
     }
   }
-
+  
   if (!selectedFlat) return <div>Loading...</div>;
 
   return (

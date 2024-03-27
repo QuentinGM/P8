@@ -26,13 +26,17 @@
     }
     .counter-slide {
         position: absolute;
-        color : $color-tertiary;
+        color: $color-tertiary;
         border-radius: 0 0 0 1rem;
-        width : 100%;
-        bottom : 1rem;
+        width: 100%;
+        bottom: 1rem;
         font-weight: 700;
         text-align: center;
-    }
+      
+        @media (max-width: 768px) {
+          position: static; // ou une autre valeur comme `relative` selon vos besoins
+        }
+      }      
     .image__container {
         height: 20rem;
         width: 100%;
@@ -48,6 +52,12 @@
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
             &.show {
+                opacity: 1;
+            }
+            &.more {
+                width: 100%;
+                height: 144px;
+                filter: brightness(0.4);
                 opacity: 1;
             }
         }

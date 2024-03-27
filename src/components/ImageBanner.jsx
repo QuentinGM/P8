@@ -6,57 +6,48 @@ export function ImageBanner(props) {
   const pictures = props.pictures;
   const [pictureCurrent, setPictureCurrent] = useState(0);
 
-  const getClassName = (i) => {
-    if (i === pictureCurrent) return "show";
-    return "";
-  };
-
   const moveToNext = () => {
     setPictureCurrent((pictureCurrent + 1) % pictures.length);
   }
 
   const moveToPrevious = () => {
-    const newPictureCurrent = pictureCurrent - 1;
-    if (newPictureCurrent < 0 ) {
-      setPictureCurrent(pictures.length - 1);
-      return;
-    }
-    setPictureCurrent(pictureCurrent - 1);
+    setPictureCurrent((pictureCurrent - 1 + pictures.length) % pictures.length);
   }
 
   const ifPicturesAreOK = () => {
     return pictures && pictures.length > 0;
   };
 
-    const getCarouselOrDefaultImage = () => {
+  const getCarouselOrDefaultImage = () => {
     if (!ifPicturesAreOK()) {
       return <img src="https://www.figma.com/file/2BZEoBhyxt5IwZgRn0wGsL/image/56fae17eb9995860bb6384a77ca7dc9bf52da3be" className="show" alt="" />;
     }
     
     return pictures.map((pic, i) => (
-      <img key={pic} src={pic} alt="" className={getClassName(i)} />
+      <img key={pic} src={pic} alt="" className={i === pictureCurrent ? "show" : ""} />
     ));
   };
-  
 
   return (
     <div className='banner__image'>
       <div className='image__container'>
         {getCarouselOrDefaultImage()}
-       </div>
-       {ifPicturesAreOK() && (
-       <>
-       <button className="btn btn-previous" onClick={moveToPrevious}>
-       <i className='fas fa-chevron-left'></i>
-        </button>
-        <span className='counter-slide'>
-        {pictureCurrent + 1} / {pictures.length}
-        </span>
-       <button className="btn btn-next" onClick={moveToNext}>
-        <i className='fas fa-chevron-right'></i>
-        </button>
+      </div>
+      {ifPicturesAreOK() && pictures.length > 1 && (  // Ajout de la condition pour afficher les chevrons seulement si le nombre d'images est supérieur à 1
+        <>
+          <button className="btn btn-previous" onClick={moveToPrevious}>
+            <i className='fas fa-chevron-left'></i>
+          </button>
+          <span className='counter-slide'>
+            {pictureCurrent + 1} / {pictures.length}
+          </span>
+          <button className="btn btn-next" onClick={moveToNext}>
+            <i className='fas fa-chevron-right'></i>
+          </button>
         </>
-       )}
+      )}
     </div>
-  )
+  );
 }
+
+export default ImageBanner;

@@ -19,7 +19,7 @@ export function DiscribePanel(props) {
           onClick={toggleContent}>
         </i>
       </p>
-
+      
       {isContentShow && <p className="description__content">{props.content}</p>}
     </div>
   );
