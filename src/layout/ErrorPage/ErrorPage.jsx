@@ -1,7 +1,7 @@
 import React from 'react'
-import "./ErrorPage.scss"
-import Navbar from '../components/Navbar'
-import Main from './Main'
+import "../ErrorPage/ErrorPage.jsx"
+import Navbar from '../../components/Navbar'
+import Main from '../Main/Main.jsx'
 import { Link } from 'react-router-dom'
 
 export function ErrorPage() {
