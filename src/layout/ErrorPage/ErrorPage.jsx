@@ -1,6 +1,6 @@
 import React from 'react'
 import "../ErrorPage/ErrorPage.jsx"
-import Navbar from '../../components/Navbar'
+import Navbar from '../../components/Navbar/Navbar.jsx'
 import Main from '../Main/Main.jsx'
 import { Link } from 'react-router-dom'
 

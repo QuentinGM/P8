@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./DiscribePanel.scss";
+import "../DiscribePanel/DiscribePanel.scss";
 
 export function DiscribePanel(props) {
   const [isContentShow, setIsContentShow] = useState(true);

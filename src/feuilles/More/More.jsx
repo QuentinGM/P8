@@ -1,6 +1,6 @@
 import React from 'react'
-import { DiscribePanel } from '../../components/DiscribePanel';
-import { ImageBanner} from '../../components/ImageBanner';
+import { DiscribePanel } from '../../components/DiscribePanel/DiscribePanel';
+import { ImageBanner} from '../../components/ImageBanner/ImageBanner';
 import "../More/More.scss";
 
 function More() {

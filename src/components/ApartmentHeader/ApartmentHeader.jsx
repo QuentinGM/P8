@@ -1,5 +1,5 @@
 import React from 'react'
-import "./ApartmentHeader.scss"
+import "../ApartmentHeader/ApartmentHeader.scss"
 
 export function ApartmentHeader({selectedFlat}) {
   const name = selectedFlat.host.name;
