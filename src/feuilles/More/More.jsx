@@ -1,7 +1,7 @@
 import React from 'react'
-import { DiscribePanel } from '../components/DiscribePanel';
-import { ImageBanner} from '../components/ImageBanner';
-import "./More.scss"
+import { DiscribePanel } from '../../components/DiscribePanel';
+import { ImageBanner} from '../../components/ImageBanner';
+import "../More/More.scss";
 
 function More() {
   return (

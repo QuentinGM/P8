@@ -1,12 +1,12 @@
 import React from 'react';
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import ReactDOM from 'react-dom/client';
-import HomeMenu from './HomeMenu.jsx';
+import HomeMenu from './feuilles/HomeMenu/HomeMenu.jsx';
 import Footer from './layout/Footer.jsx';
 import NavBar from './components/Navbar.jsx';
 import Main from './layout/Main.jsx';
 import ApartmentPage from './feuilles/ApartmentPage/ApartmentPage.jsx';
-import More from './feuilles/More.jsx';
+import More from './feuilles/More/More.jsx';
 import { ErrorPage } from './layout/ErrorPage.jsx';
 
 const HeaderAndFooter = () => {
