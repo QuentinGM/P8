@@ -1,5 +1,5 @@
 import React from 'react'
-import "../ImageBanner/ImageBanner.jsx"
+import "../ImageBanner/ImageBanner.scss"
 import { useState } from 'react';
 
 export function ImageBanner(props) {
