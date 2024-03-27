@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../DiscribePanel/DiscribePanel.scss";
 
 export function DiscribePanel(props) {
-  const [isContentShow, setIsContentShow] = useState(true);
+  const [isContentShow, setIsContentShow] = useState(false);
   const [isIconUp, setIsIconUp] = useState(true);
 
   const toggleContent = () => {
