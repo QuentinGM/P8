@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { DiscribePanel } from '../components/DiscribePanel';
-import "../feuilles/ApartmentPage.scss";
-import { ImageBanner } from '../components/ImageBanner';
-import { ApartmentHeader } from '../components/ApartmentHeader';
+import { DiscribePanel } from '../../components/DiscribePanel';
+import "../ApartmentPage/ApartmentPage.scss";
+import { ImageBanner } from '../../components/ImageBanner';
+import { ApartmentHeader } from '../../components/ApartmentHeader';
 import { useLocation } from 'react-router-dom';
 
 function ApartmentPage() {

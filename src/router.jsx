@@ -5,7 +5,7 @@ import HomeMenu from './HomeMenu.jsx';
 import Footer from './layout/Footer.jsx';
 import NavBar from './components/Navbar.jsx';
 import Main from './layout/Main.jsx';
-import ApartmentPage from './feuilles/ApartmentPage.jsx';
+import ApartmentPage from './feuilles/ApartmentPage/ApartmentPage.jsx';
 import More from './feuilles/More.jsx';
 import { ErrorPage } from './layout/ErrorPage.jsx';
 
