@@ -36,4 +36,32 @@
        1px -1px 0 black,
       -1px  1px 0 black,
        1px  1px 0 black;
+       @media screen and (max-width: 518px) {
+        text-align: left; // Aligner le texte à gauche
+    }
+
+    @media screen and (max-width: 400px) {
+        font-size: 37px; // Ajuster la taille du texte à 24px
+    }
+    @media screen and (max-width: 390px) {
+        font-size: 36px; // Ajuster la taille du texte à 24px
+    }
+    @media screen and (max-width: 382px) {
+        font-size: 34px; // Ajuster la taille du texte à 24px
+    }
+    @media screen and (max-width: 366px) {
+        font-size: 33px; // Ajuster la taille du texte à 24px
+    }
+    @media screen and (max-width: 358px) {
+        font-size: 32px; // Ajuster la taille du texte à 24px
+    }
+    @media screen and (max-width: 350px) {
+        font-size: 31px; // Ajuster la taille du texte à 24px
+    }
+    @media screen and (max-width: 343px) {
+        font-size: 30px; // Ajuster la taille du texte à 24px
+    }
 }
+
+
+

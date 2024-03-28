@@ -6,7 +6,7 @@ export const useApartments = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5173/database.json");
+        const response = await fetch("database.json");
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

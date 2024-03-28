@@ -1,8 +1,9 @@
 import React from 'react'
-import "../ErrorPage/ErrorPage.jsx"
+import "../ErrorPage/ErrorPage.scss"
 import Navbar from '../../components/Navbar/Navbar.jsx'
 import Main from '../Main/Main.jsx'
 import { Link } from 'react-router-dom'
+import Footer from '../Footer/Footer.jsx'
 
 export function ErrorPage() {
   return (
@@ -15,6 +16,7 @@ export function ErrorPage() {
   <Link to="/">Retourner sur la page d'accueil</Link>
     </div>
   </Main>
+  <Footer />
   </>
   )
   }

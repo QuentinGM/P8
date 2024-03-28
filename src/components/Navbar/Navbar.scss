@@ -8,6 +8,30 @@
     color: $color-primary;
     font-weight: 700;
 
+    .size {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 518px) {
+        padding: 0 1rem; // Nouveau padding pour les écrans inférieurs à 518px
+        .size {
+            font-size: 13px;
+    }
+    }
+
+    .navbar__logo img {
+        width: 218px; // Largeur de l'image
+        height: 68px; // Hauteur de l'image
+        object-fit: contain; // Assurez-vous que l'image reste dans les limites de son conteneur
+    }
+
+    @media screen and (max-width: 518px) {
+        .navbar__logo img {
+            width : 100px; // Largeur de l'image pour les petits écrans
+            height: 46px; // Hauteur de l'image pour les petits écrans
+        }
+    }
+
     @media screen and (max-width: 768px) {
         text-transform: uppercase;
         font-weight: 400;
