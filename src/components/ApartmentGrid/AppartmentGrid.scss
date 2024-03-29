@@ -4,18 +4,33 @@
     background-color: #f6f6f6;
     min-height: 50vh;
     border-radius: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap : 1rem;
-    padding : 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
     justify-content: space-around;
-    margin-top : 30px;
+    margin-top: 30px;
 }
 
-@media screen and (width <= 768px) {
+.grid > * {
+    width: calc(33.33% - 0.66rem);
+}
+
+@media screen and (max-width: 1460px) {
     .grid {
-        justify-content: center;
-        background-color: $grid-background-light;
-        padding : 0;
+        gap: 1rem;
     }
 }
+
+@media screen and (max-width: 518px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0; /* Supprimer le padding */
+    }
+
+    .grid > * {
+        width: calc(100% - 2rem);
+    }
+}
+

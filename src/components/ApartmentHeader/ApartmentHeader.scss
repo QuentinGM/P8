@@ -40,9 +40,9 @@
         margin-bottom : 20px;
     }
     .apartment__tags {
-        display: grid;
+        display: flex;
         grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
-        gap :1rem;
+        gap :0.5rem;
         span {
             background-color: $color-primary;
             color : $color-tertiary;
