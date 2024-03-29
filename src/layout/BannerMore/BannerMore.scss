@@ -1,0 +1,25 @@
+@use "../../scss/variables.scss" as *;
+
+.banner__more {
+    position: relative;
+    width: 100%;
+    min-height: 140px;
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden; /* Pour cacher le débordement de l'image si nécessaire */
+}
+
+.banner__more::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://www.figma.com/file/2BZEoBhyxt5IwZgRn0wGsL/image/56fae17eb9995860bb6384a77ca7dc9bf52da3be");
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    filter: brightness(0.4);
+}
+

@@ -20,7 +20,7 @@ export function ImageBanner(props) {
 
   const getCarouselOrDefaultImage = () => {
     if (!ifPicturesAreOK()) {
-      return <img src="https://www.figma.com/file/2BZEoBhyxt5IwZgRn0wGsL/image/56fae17eb9995860bb6384a77ca7dc9bf52da3be" className="show" alt="" />;
+      return <img src="" className="" alt="" />;
     }
     
     return pictures.map((pic, i) => (

@@ -1,12 +1,12 @@
 import React from 'react'
 import { DiscribePanel } from '../../components/DiscribePanel/DiscribePanel';
-import { ImageBanner} from '../../components/ImageBanner/ImageBanner';
+import BannerMore from '../../layout/BannerMore/BannerMore';
 import "../More/More.scss";
 
 function More() {
   return (
     <>
-    <ImageBanner />
+    <BannerMore />
     <div className='more__container'>
     <DiscribePanel title="Fiabilités" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." />
     <DiscribePanel title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
