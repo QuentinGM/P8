@@ -8,23 +8,29 @@
     position: relative;
 
     img {
-        width: 330%;
+        width: 315%;
         height: 200px;
         object-fit: cover;
         border-radius: 1rem;
         box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
         filter: brightness(0.8);
 
-        @media screen and (max-width: 518px) {
-            width: 110%; /* Ajuster la taille des images à 110% lorsque la largeur de l'écran est inférieure à 518px */
+        @media screen and (max-width: 768px) {
+            width: 100%; /* Ajuster la taille des images à 110% lorsque la largeur de l'écran est inférieure à 518px */
+            margin-top : 20px;
         }
     }
     & &__subtitle {
-        width : 50%;
+        width : 300%;
         margin-inline-start : 0.5rem;
         margin-block-end: 0.5rem;
         color : $color-tertiary;
         position: absolute;
+
+        @media screen and (max-width: 768px) {
+            margin-block-end: 0.5rem;
+            width : initial;
+        }
     }
 }
 

@@ -3,8 +3,8 @@ import "../ImageBanner/ImageBanner.scss"
 import { useState } from 'react';
 
 export function ImageBanner(props) {
-  const pictures = props.pictures;
-  const [pictureCurrent, setPictureCurrent] = useState(0);
+  const pictures = props.pictures; // Récupération de la liste d'images depuis les propriétés
+  const [pictureCurrent, setPictureCurrent] = useState(0); // Déclaration d'un état pour suivre l'index de l'image actuellement affichée
 
   const moveToNext = () => {
     setPictureCurrent((pictureCurrent + 1) % pictures.length);
@@ -18,11 +18,12 @@ export function ImageBanner(props) {
     return pictures && pictures.length > 0;
   };
 
+  // Fonction pour obtenir le carrousel d'images ou une image par défaut
   const getCarouselOrDefaultImage = () => {
     if (!ifPicturesAreOK()) {
       return <img src="" className="" alt="" />;
     }
-    
+
     return pictures.map((pic, i) => (
       <img key={pic} src={pic} alt="" className={i === pictureCurrent ? "show" : ""} />
     ));

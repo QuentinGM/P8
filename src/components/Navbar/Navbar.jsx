@@ -5,12 +5,12 @@ import "../../components/Navbar/Navbar.scss";
 function Navbar() {
   return (
     <nav className="navbar">
-      <NavLink to="/" exact="" activeclassname="active"> {/* Passer exact en tant que chaîne de caractères */}
+      <NavLink to="/" exact="" activeclassname="active">
         <div className="navbar__logo">
           <img src="/logo.png" alt="Logo" />
         </div>
       </NavLink>
-      <NavLink to="/" exact="" activeclassname="active"> {/* Passer exact en tant que chaîne de caractères */}
+      <NavLink to="/" exact="" activeclassname="active">
         <div className='size'>Accueil</div>
       </NavLink>
       <NavLink to="/more" exact="" activeclassname="active">

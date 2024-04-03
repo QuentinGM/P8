@@ -16,17 +16,21 @@
     width: calc(33.33% - 0.66rem);
 }
 
-@media screen and (max-width: 1460px) {
+@media screen and (max-width: 1200px) {
     .grid {
         gap: 1rem;
     }
 }
 
-@media screen and (max-width: 518px) {
+@media screen and (max-width: 767px) {
     .grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 0; /* Supprimer le padding */
+        background-color: initial;
+        border-radius: initial;
+        display: initial;
+        grid-template-columns: initial;
+        gap: initial;
+        padding: initial;
+        justify-content: initial;
     }
 
     .grid > * {
