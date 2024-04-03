@@ -1,7 +1,7 @@
 import React from 'react';
 import "../ApartmentGrid/AppartmentGrid.scss";
 import CardApartment from "../CardApartment/CardApartment.jsx";
-import { useApartments } from '../../reglagesrequest/useApartments.jsx';
+import { useApartments } from '../../services/useApartments.jsx';
 
 function AppartmentGrid() {
   const apartments = useApartments();

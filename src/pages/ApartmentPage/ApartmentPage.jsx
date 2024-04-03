@@ -4,8 +4,8 @@ import "../ApartmentPage/ApartmentPage.scss";
 import { ImageBanner } from '../../components/ImageBanner/ImageBanner.jsx';
 import { ApartmentHeader } from '../../components/ApartmentHeader/ApartmentHeader';
 import { Link, useParams } from 'react-router-dom';
-import Main from '../../layout/Main/Main.jsx';
-import "../../layout/ErrorPage/ErrorPage.scss";
+import Main from '../../components/Main/Main.jsx';
+import "../ErrorPage/ErrorPage.scss";
 
 function ApartmentPage() {
   const { id } = useParams(); // Récupérer l'ID de l'URL à l'aide du hook useParams

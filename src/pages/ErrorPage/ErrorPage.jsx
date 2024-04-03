@@ -1,9 +1,9 @@
 import React from 'react'
 import "../ErrorPage/ErrorPage.scss"
 import Navbar from '../../components/Navbar/Navbar.jsx'
-import Main from '../Main/Main.jsx'
+import Main from '../../components/Main/Main.jsx'
 import { Link } from 'react-router-dom'
-import Footer from '../Footer/Footer.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 
 export function ErrorPage() {
   return (
